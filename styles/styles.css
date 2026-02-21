@@ -32,13 +32,25 @@
 #es-rc #es-rc-content button {
   display: block;
 }
+#es-rc #es-rc-content figure {
+  display: block;
+}
+#es-rc #es-rc-content figure,
+#es-rc #es-rc-content figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 #es-rc #es-rc-content .es-disclaimer {
   font-size: 14px;
   text-wrap: balance;
 }
 @media (min-width: 1200px) {
   #es-rc #es-rc-content .es-disclaimer {
-    font-size: 6px;
+    font-size: 7px;
   }
 }
 #es-rc #es-rc-content .es-kv__right__logo, #es-rc #es-rc-content .es-kv__right__no1 {
@@ -177,6 +189,9 @@
   }
   #es-rc #es-rc-content .es-kv__right__text {
     margin: 32px 0 24px 0;
+  }
+  #es-rc #es-rc-content .es-kv__right__disclaimer {
+    margin-block: 8px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

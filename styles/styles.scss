@@ -8,7 +8,7 @@ $fw-regular: 400;
 $fw-bold: 700;
 
 $fs-base: 16px;
-$fs-disclaimer-dt: 6px;
+$fs-disclaimer-dt: 7px;
 $fs-disclaimer-mb: 14px;
 
 $px-XS: 4px;
@@ -75,6 +75,20 @@ $media-breakpoint-xl: 1200px;
 
   button {
     display: block;
+  }
+
+  figure {
+    display: block;
+  }
+
+  figure,
+  figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
   }
 
   .es-disclaimer {
@@ -227,6 +241,9 @@ $media-breakpoint-xl: 1200px;
         }
         &__text {
           margin: $px-XL 0 $px-L 0;
+        }
+        &__disclaimer {
+          margin-block: $px-S;
         }
       }
     }
