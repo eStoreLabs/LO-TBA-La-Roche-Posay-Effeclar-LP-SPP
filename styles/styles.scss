@@ -21,7 +21,8 @@ $px-XXL: 40px;
 $max-width: 1300px;
 
 $color-main: #000000;
-$color-bg: #ffffff;
+$color-white: #ffffff;
+$color-bg: #ecf5fe;
 $color-accent-blue: #009fe9;
 $color-accent-teal: #a2d6d7;
 $color-accent-dark-teal: #00302d;
@@ -53,8 +54,8 @@ $media-breakpoint-xl: 1200px;
   container-name: es-rc-content;
 
   ::selection {
-    background-color: $color-accent-dark-teal;
-    color: $color-bg;
+    background-color: $color-accent-blue;
+    color: $color-white;
   }
 
   // minimal css reset
@@ -249,7 +250,84 @@ $media-breakpoint-xl: 1200px;
     }
   }
 
-  // other sections
+  .es-bandaid {
+    text-align: center;
+    &__left {
+      padding: $px-M;
+      &__new {
+        @include mt-bold();
+        font-size: 28px;
+        text-transform: uppercase;
+        background-color: $color-accent-blue;
+        color: $color-white;
+        padding: $px-XS $px-S;
+        max-width: max-content;
+        margin-bottom: $px-M;
+      }
+      &__txt {
+        @include mt-regular();
+        font-size: 50px;
+        text-transform: uppercase;
+        &--bold {
+          @include mt-bold();
+        }
+        &--smaller {
+          font-size: 35px;
+        }
+        &--3h {
+          margin-block: $px-L;
+        }
+      }
+    }
+    &__right {
+      &__txt {
+        @include mt-bold();
+        font-size: 15px;
+        margin-block: $px-M;
+        color: $color-accent-dark-teal;
+        &--uppercase {
+          text-transform: uppercase;
+        }
+      }
+    }
+    @container es-rc-content (min-width: 576px) {
+      &__left {
+        text-align: left;
+        padding: $px-XL;
+      }
+
+      &__right {
+        position: relative;
+        &__txt {
+          position: absolute;
+          top: $px-M;
+          left: 22%;
+          z-index: 1;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      display: flex;
+      &__left {
+        padding-right: 0;
+        width: 50%;
+        margin-right: -3%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &__right {
+        &__txt {
+          left: unset;
+          right: -9%;
+          top: 0;
+          color: $color-accent-teal;
+        }
+      }
+    }
+  }
 
   // accessibility improvement for animations
   @media (prefers-reduced-motion: reduce) {

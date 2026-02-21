@@ -4,18 +4,18 @@
   font-size: 16px;
   line-height: 1.2;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #ecf5fe;
   max-width: 1300px;
   margin: auto;
   container-type: inline-size;
   container-name: es-rc-content;
 }
 #es-rc #es-rc-content ::-moz-selection {
-  background-color: #00302d;
+  background-color: #009fe9;
   color: #ffffff;
 }
 #es-rc #es-rc-content ::selection {
-  background-color: #00302d;
+  background-color: #009fe9;
   color: #ffffff;
 }
 #es-rc #es-rc-content * {
@@ -92,7 +92,7 @@
   left: 50%;
   padding: 4px 8px;
   background-color: #009fe9;
-  color: #ffffff;
+  color: #ecf5fe;
   transform: translateX(-50%);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -107,7 +107,7 @@
   position: absolute;
   top: 16px;
   left: 50%;
-  color: #ffffff;
+  color: #ecf5fe;
   transform: translateX(-50%);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -192,6 +192,86 @@
   }
   #es-rc #es-rc-content .es-kv__right__disclaimer {
     margin-block: 8px;
+  }
+}
+#es-rc #es-rc-content .es-bandaid {
+  text-align: center;
+}
+#es-rc #es-rc-content .es-bandaid__left {
+  padding: 16px;
+}
+#es-rc #es-rc-content .es-bandaid__left__new {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+  background-color: #009fe9;
+  color: #ffffff;
+  padding: 4px 8px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-bottom: 16px;
+}
+#es-rc #es-rc-content .es-bandaid__left__txt {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+#es-rc #es-rc-content .es-bandaid__left__txt--bold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+#es-rc #es-rc-content .es-bandaid__left__txt--smaller {
+  font-size: 35px;
+}
+#es-rc #es-rc-content .es-bandaid__left__txt--3h {
+  margin-block: 24px;
+}
+#es-rc #es-rc-content .es-bandaid__right__txt {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  margin-block: 16px;
+  color: #00302d;
+}
+#es-rc #es-rc-content .es-bandaid__right__txt--uppercase {
+  text-transform: uppercase;
+}
+@container es-rc-content (min-width: 576px) {
+  #es-rc #es-rc-content .es-bandaid__left {
+    text-align: left;
+    padding: 32px;
+  }
+  #es-rc #es-rc-content .es-bandaid__right {
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-bandaid__right__txt {
+    position: absolute;
+    top: 16px;
+    left: 22%;
+    z-index: 1;
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 1200px) {
+  #es-rc #es-rc-content .es-bandaid {
+    display: flex;
+  }
+  #es-rc #es-rc-content .es-bandaid__left {
+    padding-right: 0;
+    width: 50%;
+    margin-right: -3%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #es-rc #es-rc-content .es-bandaid__right__txt {
+    left: unset;
+    right: -9%;
+    top: 0;
+    color: #a2d6d7;
   }
 }
 @media (prefers-reduced-motion: reduce) {
