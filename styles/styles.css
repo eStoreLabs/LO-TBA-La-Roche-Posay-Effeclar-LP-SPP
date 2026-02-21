@@ -1,12 +1,14 @@
 #es-rc #es-rc-content {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 1.2;
   color: #000000;
   background-color: #ffffff;
-  max-width: 990px;
+  max-width: 1300px;
   margin: auto;
+  container-type: inline-size;
+  container-name: es-rc-content;
 }
 #es-rc #es-rc-content ::-moz-selection {
   background-color: #00302d;
@@ -30,11 +32,152 @@
 #es-rc #es-rc-content button {
   display: block;
 }
-#es-rc #es-rc-content .es-section-title {
-  font-size: 32px;
+#es-rc #es-rc-content .es-disclaimer {
+  font-size: 14px;
+  text-wrap: balance;
+}
+@media (min-width: 1200px) {
+  #es-rc #es-rc-content .es-disclaimer {
+    font-size: 6px;
+  }
+}
+#es-rc #es-rc-content .es-kv__right__logo, #es-rc #es-rc-content .es-kv__right__no1 {
+  max-width: 330.6666666667px;
+}
+#es-rc #es-rc-content .es-kv__right__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 26px;
+  margin-block: 32px;
+}
+#es-rc #es-rc-content .es-kv__right__text--bold {
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
+}
+#es-rc #es-rc-content .es-kv__right__no1 {
+  padding-inline: 32px;
+}
+#es-rc #es-rc-content .es-kv__right__disclaimer {
   text-align: center;
   margin-block: 16px;
+}
+#es-rc #es-rc-content .es-kv__left__img {
+  display: none;
+}
+@container es-rc-content (min-width: 576px) {
+  #es-rc #es-rc-content .es-kv__left__img {
+    display: block;
+  }
+}
+#es-rc #es-rc-content .es-kv__left__bestseller__wrapper {
+  position: relative;
+}
+#es-rc #es-rc-content .es-kv__left__bestseller--txt {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  padding: 4px 8px;
+  background-color: #009fe9;
+  color: #ffffff;
+  transform: translateX(-50%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: center;
+}
+#es-rc #es-rc-content .es-kv__left__tradzik__wrapper {
+  position: relative;
+}
+#es-rc #es-rc-content .es-kv__left__tradzik--txt {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  color: #ffffff;
+  transform: translateX(-50%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  padding-inline: 16px;
+}
+#es-rc #es-rc-content .es-kv__left__tradzik--txt--ml {
+  width: 64%;
+}
+#es-rc #es-rc-content .es-kv__left__tradzik--txt--dr {
+  width: 36%;
+}
+@container es-rc-content (min-width: 576px) {
+  #es-rc #es-rc-content .es-kv__left {
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-kv__left__bestseller__wrapper, #es-rc #es-rc-content .es-kv__left__tradzik__wrapper {
+    position: static;
+  }
+  #es-rc #es-rc-content .es-kv__left__bestseller--img, #es-rc #es-rc-content .es-kv__left__tradzik--img {
+    display: none;
+  }
+  #es-rc #es-rc-content .es-kv__left__bestseller--txt {
+    left: 16%;
+  }
+  #es-rc #es-rc-content .es-kv__left__tradzik--txt {
+    padding-inline: 0;
+    width: 66%;
+    left: 66%;
+  }
+  #es-rc #es-rc-content .es-kv__left__bestseller--txt, #es-rc #es-rc-content .es-kv__left__tradzik--txt {
+    top: 8px;
+  }
+}
+@container es-rc-content (min-width: 768px) {
+  #es-rc #es-rc-content .es-kv__left__bestseller--txt, #es-rc #es-rc-content .es-kv__left__tradzik--txt {
+    top: 24px;
+  }
+  #es-rc #es-rc-content .es-kv__left__tradzik--txt {
+    width: 50%;
+    left: 74%;
+  }
+  #es-rc #es-rc-content .es-kv__left__tradzik--txt--ml, #es-rc #es-rc-content .es-kv__left__tradzik--txt--dr {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  #es-rc #es-rc-content .es-kv__left__bestseller--txt, #es-rc #es-rc-content .es-kv__left__tradzik--txt {
+    top: 16px;
+  }
+  #es-rc #es-rc-content .es-kv__left__tradzik--txt {
+    width: 37%;
+    left: 50%;
+  }
+  #es-rc #es-rc-content .es-kv__left__bestseller--txt {
+    left: 9%;
+  }
+}
+@media (min-width: 1200px) {
+  #es-rc #es-rc-content .es-kv {
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-kv__right {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #es-rc #es-rc-content .es-kv__right__logo, #es-rc #es-rc-content .es-kv__right__no1 {
+    padding-inline: 40px;
+  }
+  #es-rc #es-rc-content .es-kv__right__text {
+    margin: 32px 0 24px 0;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   #es-rc #es-rc-content * {
