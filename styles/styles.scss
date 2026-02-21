@@ -2,8 +2,7 @@
 
 // set up variables
 
-$text-main: "font-name", sans-serif;
-$text-secondary: "font-name", sans-serif;
+$text-main: "Montserrat", sans-serif;
 
 $fw-regular: 400;
 $fw-bold: 700;
@@ -17,10 +16,11 @@ $px-L: 24px;
 $px-XL: 32px;
 $px-XXL: 40px;
 
-$color-main: #0d1116;
-$color-bg: #f6f8fa;
-$color-accent: #f6a255;
-$color-accent-2: #69a7dd;
+$color-main: #000000;
+$color-bg: #ffffff;
+$color-accent-blue: #009fe9;
+$color-accent-teal: #a2d6d7;
+$color-accent-dark-teal: #00302d;
 
 $media-breakpoint-sm: 576px;
 $media-breakpoint-md: 768px;
@@ -38,8 +38,8 @@ $media-breakpoint-xl: 1200px;
   margin: auto;
 
   ::selection {
-    background-color: $color-accent-2;
-    color: #fff;
+    background-color: $color-accent-dark-teal;
+    color: $color-bg;
   }
 
   // minimal css reset
@@ -63,81 +63,16 @@ $media-breakpoint-xl: 1200px;
   }
 
   .es-section-title {
-    font-family: $text-secondary;
     font-size: $fs-header;
     font-weight: $fw-bold;
     text-align: center;
     margin-block: $px-M;
   }
 
-  .es-kv {
-    background-color: $color-bg;
-    &__img {
-      &--desktop {
-        display: none;
-      }
-      @media (min-width: $media-breakpoint-md) {
-        &--mobile {
-          display: none;
-        }
-        &--desktop {
-          display: block;
-        }
-      }
-    }
-  }
 
-  .es-section {
-    margin-block: $px-M;
-
-    &__button {
-      background-color: $color-accent;
-      padding: $px-S $px-M;
-      cursor: pointer;
-      margin: auto;
-
-      @media (min-width: $media-breakpoint-md) {
-        background-color: $color-accent-2;
-      }
-    }
-  }
 
   // other sections
 
-  // Swiper styles, reset some of the inherent ones
-
-  .es-slider {
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after,
-    .swiper-button-next:after,
-    .swiper-rtl .swiper-button-next:after {
-      content: "";
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: unset;
-      height: unset;
-      position: static;
-      justify-content: unset;
-      margin: 0;
-      display: unset;
-    }
-    &__buttons {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      &--prev__img,
-      &--next__img {
-        display: block;
-        width: 32px;
-        height: 32px;
-        margin: 0;
-      }
-      &--prev__img {
-        transform: rotate(180deg);
-      }
-    }
-  }
 
   // accessibility improvement for animations
   @media (prefers-reduced-motion: reduce) {
