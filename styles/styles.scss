@@ -34,6 +34,7 @@ $media-breakpoint-sm: 576px;
 $media-breakpoint-md: 768px;
 $media-breakpoint-lg: 992px;
 $media-breakpoint-xl: 1200px;
+$media-breakpoint-xxl: 1300px;
 
 @mixin mt-regular {
   font-family: $text-main;
@@ -50,11 +51,14 @@ $media-breakpoint-xl: 1200px;
   font-size: $fs-base;
   line-height: 1.2;
   color: $color-main;
-  background-color: $color-bg;
-  max-width: $max-width;
-  margin: auto;
+  background-color: $color-white;
   container-type: inline-size;
   container-name: es-rc-content;
+
+  @media (min-width: $media-breakpoint-xxl) {
+    max-width: $max-width;
+    margin: auto;
+  }
 
   ::selection {
     background-color: $color-accent-blue;
@@ -94,6 +98,14 @@ $media-breakpoint-xl: 1200px;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+  }
+
+  .es-section {
+    margin-block: $px-XXL;
+  }
+
+  .es-section {
+    background-color: $color-bg;
   }
 
   .es-disclaimer {
@@ -489,7 +501,7 @@ $media-breakpoint-xl: 1200px;
         align-items: flex-start;
       }
       &__flex-item {
-        max-width: 650px;
+        max-width: 660px;
         &__img {
           display: none;
         }

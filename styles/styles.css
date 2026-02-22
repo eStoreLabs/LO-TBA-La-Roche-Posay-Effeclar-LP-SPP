@@ -4,11 +4,15 @@
   font-size: 16px;
   line-height: 1.2;
   color: #000000;
-  background-color: #ecf5fe;
-  max-width: 1300px;
-  margin: auto;
+  background-color: #ffffff;
   container-type: inline-size;
   container-name: es-rc-content;
+}
+@media (min-width: 1300px) {
+  #es-rc #es-rc-content {
+    max-width: 1300px;
+    margin: auto;
+  }
 }
 #es-rc #es-rc-content ::-moz-selection {
   background-color: #009fe9;
@@ -44,6 +48,12 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+#es-rc #es-rc-content .es-section {
+  margin-block: 40px;
+}
+#es-rc #es-rc-content .es-section {
+  background-color: #ecf5fe;
 }
 #es-rc #es-rc-content .es-disclaimer {
   font-size: 14px;
@@ -446,7 +456,7 @@
     align-items: flex-start;
   }
   #es-rc #es-rc-content .es-cross__flex-item {
-    max-width: 650px;
+    max-width: 660px;
   }
   #es-rc #es-rc-content .es-cross__flex-item__img {
     display: none;
