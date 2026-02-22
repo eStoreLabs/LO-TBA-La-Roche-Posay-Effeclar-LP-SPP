@@ -1,9 +1,22 @@
+.breadcrumbs {
+  display: none;
+}
+
+main#maincontent {
+  margin-top: 0;
+}
+
+.columns div.column.main {
+  padding-bottom: 0;
+}
+
 #es-rc #es-rc-content {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   color: #000000;
+  background: #ffffff;
   background-color: #ffffff;
   container-type: inline-size;
   container-name: es-rc-content;
