@@ -452,7 +452,7 @@
   }
   #es-rc #es-rc-content .es-cross__flex-item__link {
     width: 13%;
-    height: 84%;
+    height: 88%;
     position: absolute;
     bottom: 0;
     border-radius: 8px;
@@ -489,6 +489,96 @@
     font-weight: 700;
     font-size: 22px;
     color: #009fe9;
+  }
+}
+#es-rc #es-rc-content .es-effects {
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 24px;
+  text-align: center;
+  background-size: cover;
+  background-position: right;
+}
+#es-rc #es-rc-content .es-effects ::-moz-selection {
+  background-color: #00a599;
+  color: #ffffff;
+}
+#es-rc #es-rc-content .es-effects ::selection {
+  background-color: #00a599;
+  color: #ffffff;
+}
+#es-rc #es-rc-content .es-effects__new {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: #00a599;
+  padding: 4px 8px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: auto;
+}
+#es-rc #es-rc-content .es-effects__new:hover {
+  scale: 1.05;
+}
+#es-rc #es-rc-content .es-effects__headline {
+  font-size: 50px;
+  margin-block: 32px;
+}
+#es-rc #es-rc-content .es-effects__headline--bold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+#es-rc #es-rc-content .es-effects__txt {
+  font-size: 25px;
+}
+#es-rc #es-rc-content .es-effects__txt--bold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+#es-rc #es-rc-content .es-effects__flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#es-rc #es-rc-content .es-effects__flex-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#es-rc #es-rc-content .es-effects__number {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 110px;
+}
+@container es-rc-content (min-width: 440px) {
+  #es-rc #es-rc-content .es-effects__flex-wrapper {
+    align-items: center;
+    margin-block: 24px;
+  }
+  #es-rc #es-rc-content .es-effects__flex-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+}
+@container es-rc-content (min-width: 576px) {
+  #es-rc #es-rc-content .es-effects {
+    text-align: left;
+  }
+  #es-rc #es-rc-content .es-effects__content {
+    max-width: 670px;
+    margin-left: auto;
+  }
+  #es-rc #es-rc-content .es-effects__new {
+    margin: 0;
+  }
+  #es-rc #es-rc-content .es-effects__headline {
+    margin: 8px 0 8px 0;
+  }
+  #es-rc #es-rc-content .es-effects__flex-wrapper {
+    flex-direction: row;
+    margin-block: 0;
+    gap: 32px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

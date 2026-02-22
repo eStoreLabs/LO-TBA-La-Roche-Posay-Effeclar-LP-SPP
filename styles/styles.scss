@@ -25,6 +25,7 @@ $color-white: #ffffff;
 $color-bg: #ecf5fe;
 $color-accent-blue: #009fe9;
 $color-accent-teal: #a2d6d7;
+$color-accent-mid-teal: #00a599;
 $color-accent-dark-teal: #00302d;
 
 $transition: all 0.2s ease-in-out;
@@ -493,7 +494,7 @@ $media-breakpoint-xl: 1200px;
         }
         &__link {
           width: 13%;
-          height: 84%;
+          height: 88%;
           position: absolute;
           bottom: 0;
           border-radius: 8px;
@@ -530,6 +531,87 @@ $media-breakpoint-xl: 1200px;
           font-size: 22px;
           color: $color-accent-blue;
         }
+      }
+    }
+  }
+
+  .es-effects {
+    color: $color-white;
+    text-transform: uppercase;
+    padding: $px-L;
+    text-align: center;
+    background-size: cover;
+    background-position: right;
+
+    ::selection {
+      background-color: $color-accent-mid-teal;
+      color: $color-white;
+    }
+    &__new {
+      @include mt-bold();
+      font-size: 20px;
+      background-color: $color-accent-mid-teal;
+      padding: $px-XS $px-S;
+      max-width: max-content;
+      margin: auto;
+      &:hover {
+        scale: 1.05;
+      }
+    }
+    &__headline {
+      font-size: 50px;
+      margin-block: $px-XL;
+      &--bold {
+        @include mt-bold();
+      }
+    }
+    &__txt {
+      font-size: 25px;
+      &--bold {
+        @include mt-bold();
+      }
+    }
+    &__flex-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: $px-L;
+    }
+    &__flex-item {
+      display: flex;
+      flex-direction: column;
+      gap: $px-M;
+    }
+    &__number {
+      @include mt-bold();
+      font-size: 110px;
+    }
+    @container es-rc-content (min-width: 440px) {
+      &__flex-wrapper {
+        align-items: center;
+        margin-block: $px-L;
+      }
+      &__flex-item {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+      }
+    }
+    @container es-rc-content (min-width: 576px) {
+      text-align: left;
+      &__content {
+        max-width: 670px;
+        margin-left: auto;
+      }
+      &__new {
+        margin: 0;
+      }
+      &__headline {
+        margin: $px-S 0 $px-S 0;
+      }
+      &__flex-wrapper {
+        flex-direction: row;
+        margin-block: 0;
+        gap: $px-XL;
       }
     }
   }
