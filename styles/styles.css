@@ -385,7 +385,8 @@
   font-weight: 700;
   font-size: 22px;
   text-transform: uppercase;
-  margin: auto;
+  margin-inline: auto;
+  margin-bottom: 8px;
 }
 #es-rc #es-rc-content .es-cross__flex-item__desc {
   font-size: 18px;
@@ -579,6 +580,42 @@
     flex-direction: row;
     margin-block: 0;
     gap: 32px;
+  }
+}
+#es-rc #es-rc-content .es-recommend {
+  padding: 24px;
+  text-align: center;
+  background-size: cover;
+  background-position: left;
+}
+#es-rc #es-rc-content .es-recommend ::-moz-selection {
+  background-color: #00302d;
+  color: #ffffff;
+}
+#es-rc #es-rc-content .es-recommend ::selection {
+  background-color: #00302d;
+  color: #ffffff;
+}
+#es-rc #es-rc-content .es-recommend__content {
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: auto;
+}
+#es-rc #es-rc-content .es-recommend__txt {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  text-transform: uppercase;
+  word-break: break-word;
+  margin-block: 32px;
+}
+#es-rc #es-rc-content .es-recommend__txt--bold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+@container es-rc-content (min-width: 768px) {
+  #es-rc #es-rc-content .es-recommend__content {
+    margin-left: 5%;
   }
 }
 @media (prefers-reduced-motion: reduce) {
