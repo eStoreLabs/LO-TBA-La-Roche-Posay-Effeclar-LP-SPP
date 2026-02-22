@@ -20,6 +20,7 @@
 }
 #es-rc #es-rc-content * {
   box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
 }
 #es-rc #es-rc-content p {
   margin: 0;
@@ -212,6 +213,9 @@
   max-width: max-content;
   margin-bottom: 16px;
 }
+#es-rc #es-rc-content .es-bandaid__left__new:hover {
+  scale: 1.05;
+}
 #es-rc #es-rc-content .es-bandaid__left__txt {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -295,6 +299,9 @@
   display: flex;
   align-items: center;
   gap: 8px;
+}
+#es-rc #es-rc-content .es-features__flex-item:hover .es-features__flex-item__img {
+  scale: 1.1;
 }
 #es-rc #es-rc-content .es-features__flex-item__img {
   max-width: 32px;

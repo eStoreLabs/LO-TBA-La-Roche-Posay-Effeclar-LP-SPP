@@ -27,6 +27,8 @@ $color-accent-blue: #009fe9;
 $color-accent-teal: #a2d6d7;
 $color-accent-dark-teal: #00302d;
 
+$transition: all 0.2s ease-in-out;
+
 $media-breakpoint-sm: 576px;
 $media-breakpoint-md: 768px;
 $media-breakpoint-lg: 992px;
@@ -62,6 +64,7 @@ $media-breakpoint-xl: 1200px;
 
   * {
     box-sizing: border-box;
+    transition: $transition;
   }
 
   p {
@@ -263,6 +266,9 @@ $media-breakpoint-xl: 1200px;
         padding: $px-XS $px-S;
         max-width: max-content;
         margin-bottom: $px-M;
+        &:hover {
+          scale: 1.05;
+        }
       }
       &__txt {
         @include mt-regular();
@@ -349,6 +355,9 @@ $media-breakpoint-xl: 1200px;
       display: flex;
       align-items: center;
       gap: $px-S;
+      &:hover .es-features__flex-item__img {
+        scale: 1.1;
+      }
       &__img {
         max-width: 32px;
         margin: 0;
